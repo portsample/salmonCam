@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:focusable="true"
+	android:focusableInTouchMode="true">
+	
+    <LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content">
+    <TextView
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SalmonCam- v11/23 2015" />
+    
+    
+     <TextView
+        android:id="@+id/textviewIndicatorxml"
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="condition"/>
+     <Button
+        android:id="@+id/buttonrotateviewxml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R" /> 
+    
+    
+    </LinearLayout> 
+<LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="wrap_content" 
+         android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/StartRecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start" />    
+    <Button
+        android:id="@+id/StopRecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop" />   
+      <Button
+        android:id="@+id/UpdateSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dip"
+        android:text="Update settings" /> 
+    </LinearLayout>
+<LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent" 
+         android:layout_height="wrap_content"
+         android:layout_gravity="fill_horizontal"
+         android:gravity="right">
+    
+     <TextView
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frames/second:" />
+    <EditText 
+            android:id="@+id/textboxframespersecondxml"
+            android:editable="true"
+            android:inputType="number"
+            android:maxLength="2"
+            style="@style/myStyle"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="0"
+            android:layout_marginRight="10dip"/>
+ </LinearLayout>
+ 
+<LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent" 
+         android:layout_height="wrap_content"
+         android:gravity="right">
+     <TextView
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JPEG image quality:" />
+    <EditText 
+            android:id="@+id/textboxJpegQualityxml"
+            android:editable="true"
+            android:inputType="number"
+            android:maxLength="2"
+            style="@style/myStyle"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="0"
+            android:layout_marginRight="10dip"/>
+ </LinearLayout>
+<LinearLayout
+    android:orientation="horizontal"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content">
+    <TextView
+ 		style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:text="Camcorder profile: " />
+    <Spinner 
+		style="@style/myStyle"           
+		android:id="@+id/spinnerCamcorderProfilexml"
+		android:popupBackground="#D3D5D3"
+		android:drawSelectorOnTop="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="10dip"/>    
+ </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+ 		style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:text="Zoom: " />      
+    
+    <EditText 
+        android:id="@+id/textboxzoomdigitxml"
+        android:editable="false"
+        android:maxLength="2"
+        style="@style/myStyle"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:text="0"/>   
+            
+    <SeekBar
+        android:id="@+id/seekbarZoomxml"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="0dp">
+    </SeekBar>
+ </LinearLayout>
+
+ 
+ <LinearLayout
+    android:orientation="horizontal"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content">
+    <TextView
+ 		style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:text="Exposure: " />
+    
+      <EditText 
+        android:id="@+id/textboxexposuredigitxml"
+        android:editable="false"
+        android:maxLength="2"
+        style="@style/myStyle"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:text="0"/> 
+    
+    <SeekBar
+        android:id="@+id/seekbarExposurexml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="0dp"            
+        android:max="100" >
+    </SeekBar>  
+ </LinearLayout>
+<LinearLayout
+         android:orientation="horizontal"
+         android:layout_width="match_parent" 
+         android:layout_height="wrap_content"
+         android:gravity="right">
+     <TextView
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Segment duration (file length):" />
+    <EditText 
+            android:id="@+id/textboxRepeatIntervalxml"
+            android:editable="true"
+            android:inputType="number"
+            android:maxLength="2"
+            style="@style/myStyle"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="0"
+            android:layout_marginRight="10dip"/>
+     <TextView
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" minutes" />
+ </LinearLayout>
+     <!-- New Layout -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right" >
+     
+      <TextView
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Program auto start:" />
+     
+    <CheckBox
+        android:id="@+id/ckbxProgramAutoStartxml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <TextView
+        style="@style/myStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loop video:" />
+    
+    <CheckBox
+        android:id="@+id/ckbxRepeatxml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+  
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right" >
+     <Button
+        android:id="@+id/DefaultSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dip"
+        android:text="Default settings" />
+        
+    <Button
+        android:id="@+id/ExitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit Application" />
+    </LinearLayout>
+ 
+    
+        
+        
+        
+    <SurfaceView
+        android:id="@+id/CameraView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>
